@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:background="@drawable/transparentbackrepeat" android:id="@+id/llColorView"
+	android:layout_margin="5px">
+	<ImageView android:id="@+id/imgColorView"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:background="#333333" android:layout_margin="1px" android:minHeight="30px" android:minWidth="60px" />
+</LinearLayout>

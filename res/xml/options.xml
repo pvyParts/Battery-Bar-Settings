@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <CheckBoxPreference
+        android:key="show_battery_bar"
+        android:title="Show Battery Bar" />
+
+    <Preference
+        android:key="battery_bar_height_pref"
+        android:title="@string/batbat_height" />
+
+    <PreferenceCategory android:title="@string/batt_color" >
+
+        <CheckBoxPreference
+            android:key="battery_bar_automatically_color_pref"
+            android:title="@string/batt_col_auto" >
+        </CheckBoxPreference>
+
+        <Preference
+            android:key="battery_bar_color_pref"
+            android:title="@string/batt_col_static" >
+        </Preference>
+
+        <Preference
+            android:key="battery_bar_color_auto_charging"
+            android:title="@string/batt_col_charge" >
+        </Preference>
+
+        <Preference
+            android:key="battery_bar_color_auto_regular"
+            android:title="@string/batt_col_reg" >
+        </Preference>
+
+        <Preference
+            android:key="battery_bar_high_pref"
+            android:title="@string/batbar_high" />
+
+        <Preference
+            android:key="battery_bar_color_auto_medium"
+            android:summary="@string/batt_less_40"
+            android:title="@string/batt_less_40_title" >
+        </Preference>
+
+        <Preference
+            android:key="battery_bar_low_pref"
+            android:title="@string/batbar_low" />
+
+        <Preference
+            android:key="battery_bar_color_auto_low"
+            android:summary="@string/batt_less_15"
+            android:title="@string/batt_less_15_title" >
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="other_cat"
+        android:title="About" >
+
+        <Preference
+            android:key="about_prefscreen"
+            android:summary="Creator Links and Thread links"
+            android:title="About pvyMods Batery Bar" >
+
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.pvy.battbar.settings.AboutActivity"
+                android:targetPackage="com.pvy.battbar.settings" />
+        </Preference>
+    </PreferenceCategory>
+
+</PreferenceScreen>

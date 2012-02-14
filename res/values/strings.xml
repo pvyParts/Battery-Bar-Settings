@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+	<string name="on">Show!</string>
+	<string name="off">Hide!</string>
+	<string name="on1">Auto-magicaly Color!</string>
+	<string name="off2">Static Color!</string>
+    <string name="hello">Hello World, options!</string>
+    <string name="app_name">Battery Bar Settings</string>
+    <string name="prefOK">OK</string>
+    <string name="color_select_color">Select a color</string>
+	<string name="color_old_color">Old color</string>
+	<string name="color_new_color">New color</string>
+	<string name="color_hex_invalid">Invalid color hex code!</string>
+	
+	<string name="batt_color">Color Settings</string>
+	<string name="batt_col_icon">Icon Tint Color</string>
+	<string name="batt_col_auto">Automatically Color</string>
+	<string name="batt_col_static">Static Battery Color</string>
+	<string name="batt_col_charge">[Auto] Charging Color</string>
+	<string name="batt_col_reg">[Auto] Regular Color</string>
+	<string name="batt_less_40">When battery is &lt; 40%</string>
+	<string name="batt_less_15">When battery is &lt; 15%</string>
+	<string name="batt_less_40_title">[Auto] Medium Level Color</string>
+	<string name="batt_less_15_title">[Auto] Low Level Color</string>
+	<string name="batbat_height">Height</string>
+	<string name="batbar_low">Low Colour Level Cutoff</string>   
+	<string name="batbar_high">Med Colour Level Cutoff</string>   
+	    
+</resources>

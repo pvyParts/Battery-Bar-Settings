@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+		xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory
+		android:title="About">
+			<Preference
+			android:key="pvy_web"
+			android:title="PvyMods"
+			android:summary="Created and maintained by pvyParts, click here to vissit my site for more of my work"></Preference>
+			<Preference
+			android:key="thread_link"
+			android:title="Battery Bar Thread"
+			android:summary="Please report all bugs and issues here!"></Preference>
+	</PreferenceCategory>
+</PreferenceScreen>
