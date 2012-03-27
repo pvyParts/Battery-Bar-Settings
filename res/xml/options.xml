@@ -8,7 +8,16 @@
     <Preference
         android:key="battery_bar_height_pref"
         android:title="@string/batbat_height" />
+    
+            <CheckBoxPreference
+            android:key="battery_bar_anim"
+            android:title="@string/amin_on" >
+        </CheckBoxPreference>
+    
+    <ListPreference android:entries="@array/pulse_strings" android:entryValues="@array/pulse_values" android:title="@string/pulse_anim" android:key="anim_pulse_type"/>
 
+    <ListPreference android:entries="@array/anim_strings" android:entryValues="@array/anim_values" android:title="@string/aimin_mode" android:key="anim_type"/>
+    
     <PreferenceCategory android:title="@string/batt_color" >
 
         <CheckBoxPreference

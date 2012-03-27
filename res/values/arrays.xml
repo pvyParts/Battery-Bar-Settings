@@ -7,5 +7,34 @@
 		<item >4</item>
 		<item >5</item>
 	</string-array>
-	
+		<string-array name="align_values">
+		<item>1</item>
+		<item>2</item>
+	</string-array>
+	<string-array name="align_strings">
+		<item>Top of Screen</item>
+		<item>Bottom of Screen</item>
+	</string-array>
+	    	<string-array name="anim_values">
+		<item>0</item>
+		<item>1</item>
+				<item>3</item>
+		    		<item>2</item>
+				    
+	</string-array>
+	<string-array name="anim_strings">
+		<item>Normal</item>
+		<item>Accelerate and Decelerate</item>
+		<item>Decelerate</item>
+		<item>Accelerate</item>
+	</string-array>
+	    	<string-array name="pulse_values">
+		<item>1</item>
+		<item>0</item>
+	</string-array>
+	<string-array name="pulse_strings">
+		<item>Pulse Up and Down</item>
+		<item>Standard</item>
+	</string-array>
+	    
 </resources>

@@ -26,5 +26,10 @@
 	<string name="batbat_height">Height</string>
 	<string name="batbar_low">Low Colour Level Cutoff</string>   
 	<string name="batbar_high">Med Colour Level Cutoff</string>   
+	                <string name="pulse_anim">Animation Pulse Mode</string>
+            <string name="aimin_mode">Animation Mode</string>
+                      <string name="hide_on">Hide when Statusbar is hidden</string>
+                
+                            <string name="amin_on">Animate</string>
 	    
 </resources>

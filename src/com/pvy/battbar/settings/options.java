@@ -38,8 +38,10 @@ import de.devmil.common.ui.color.ColorSelectorDialog.OnColorChangedListener;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -81,6 +83,9 @@ public class options extends PreferenceActivity implements
 	private int batterybarColorPickerFlag;
 
 	private ColorSelectorDialog batteryColorPickerDialog = null;
+	
+	private int anim_mode = 0;
+	private int pulse_mode = 0;
 
 	private Preference height;
 	private Preference low;
@@ -92,6 +97,10 @@ public class options extends PreferenceActivity implements
 	private int high_lvl = 40;
 
 	private Context mContext;
+
+	ListPreference align;
+	ListPreference anim_type;
+	ListPreference anim_pulse_type;
 
 	/** Called when the activity is first created. **/
 	@Override
@@ -122,6 +131,47 @@ public class options extends PreferenceActivity implements
 		height.setOnPreferenceClickListener(this);
 		low.setOnPreferenceClickListener(this);
 		high.setOnPreferenceClickListener(this);
+		
+		anim_mode = Settings.System.getInt(getContentResolver(), "battery_bar_anim_on", 1);
+
+		//align = (ListPreference) findPreference("battery_bar_align_pref");
+		anim_type = (ListPreference) findPreference("anim_type");
+		anim_pulse_type = (ListPreference) findPreference("anim_pulse_type");
+		Preference battery_anim = (Preference) findPreference("battery_bar_anim");
+		battery_anim
+		.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+
+			public boolean onPreferenceClick(Preference preference) {
+				boolean checked = ((CheckBoxPreference) preference)
+						.isChecked();
+				if (checked) {
+					Settings.System.putInt(getContentResolver(),"battery_bar_anim_on", 1);
+					findPreference("anim_pulse_type").setEnabled(true);
+					findPreference("anim_type").setEnabled(true);	
+				} else {
+					Settings.System.putInt(getContentResolver(),"battery_bar_anim_on", 0);
+					findPreference("anim_pulse_type").setEnabled(false);
+					findPreference("anim_type").setEnabled(false);
+				}
+				return true;
+			}
+
+		});
+
+		if (anim_mode == 1) {
+			((CheckBoxPreference) battery_anim)
+					.setChecked(true);
+			//battery_anim.setSummary(R.string.on);
+			findPreference("anim_pulse_type").setEnabled(true);
+			findPreference("anim_type").setEnabled(true);
+
+		} else {
+			((CheckBoxPreference) battery_anim)
+					.setChecked(false);
+			//battery_anim.setSummary(R.string.off);
+			findPreference("anim_pulse_type").setEnabled(false);
+			findPreference("anim_type").setEnabled(false);
+		}
 
 		try {
 			if (Settings.System.getInt(getContentResolver(),
@@ -353,6 +403,9 @@ public class options extends PreferenceActivity implements
 					}
 				});
 		Alert2 = alert2.create();
+		
+		anim_type.setOnPreferenceChangeListener(this);
+		anim_pulse_type.setOnPreferenceChangeListener(this);
 
 	}
 
@@ -424,7 +477,18 @@ public class options extends PreferenceActivity implements
 					hold);
 			height.setSummary("" + ((String) newValue));
 			return true;
-		}
+		} else if (preference == anim_type){
+			int hold = Integer.valueOf((String) newValue);
+			
+			Settings.System.putInt(getContentResolver(), "anim_type", hold);
+
+		} else if (preference == anim_pulse_type){
+			int hold = Integer.valueOf((String) newValue);
+
+			Settings.System.putInt(getContentResolver(), "anim_pulse_type", hold);
+
+		}			
+
 
 		return false;
 	}

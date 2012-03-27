@@ -9,6 +9,12 @@ package com.pvy.battbar.settings;
 
 public final class R {
     public static final class array {
+        public static final int align_strings=0x7f050002;
+        public static final int align_values=0x7f050001;
+        public static final int anim_strings=0x7f050004;
+        public static final int anim_values=0x7f050003;
+        public static final int pulse_strings=0x7f050006;
+        public static final int pulse_values=0x7f050005;
         public static final int size_values=0x7f050000;
     }
     public static final class attr {
@@ -58,6 +64,8 @@ public final class R {
         public static final int main=0x7f030005;
     }
     public static final class string {
+        public static final int aimin_mode=0x7f070019;
+        public static final int amin_on=0x7f07001b;
         public static final int app_name=0x7f070005;
         public static final int batbar_high=0x7f070017;
         public static final int batbar_low=0x7f070016;
@@ -77,11 +85,13 @@ public final class R {
         public static final int color_old_color=0x7f070008;
         public static final int color_select_color=0x7f070007;
         public static final int hello=0x7f070004;
+        public static final int hide_on=0x7f07001a;
         public static final int off=0x7f070001;
         public static final int off2=0x7f070003;
         public static final int on=0x7f070000;
         public static final int on1=0x7f070002;
         public static final int prefOK=0x7f070006;
+        public static final int pulse_anim=0x7f070018;
     }
     public static final class xml {
         public static final int about_prefs=0x7f040000;
